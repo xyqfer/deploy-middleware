@@ -11,11 +11,10 @@ const deploy = (params) => {
 
         if (ref === `refs/heads/${params.branch}` && !isBot) {
             const deployUrl = params.deployUrl || process.env.DEPLOY_URL;
-            request.post(deployUrl);
-            return true;
-        } else {
-            return false;
+            request.post(deployUrl);   
         }
+
+        return true;
     } else {
         return false;
     }
