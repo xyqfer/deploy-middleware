@@ -1,0 +1,26 @@
+{
+  "name": "@xyqfer/deploy-middleware",
+  "version": "1.0.0",
+  "description": "deploy middleware for express and koa",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "publish:npm": "npm publish --access=public --registry=https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xyqfer/deploy-middleware.git"
+  },
+  "keywords": [
+    "deploy",
+    "middleware",
+    "express",
+    "koa"
+  ],
+  "author": "liangliang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xyqfer/deploy-middleware/issues"
+  },
+  "homepage": "https://github.com/xyqfer/deploy-middleware#readme"
+}
