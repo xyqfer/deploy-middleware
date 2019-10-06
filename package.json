@@ -1,6 +1,6 @@
 {
   "name": "@xyqfer/deploy-middleware",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "deploy middleware for express and koa",
   "main": "index.js",
   "scripts": {
