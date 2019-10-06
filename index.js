@@ -14,6 +14,12 @@ module.exports = ({ framwork = 'express', path = '/deploy',  branch = 'master', 
 
         if (!result) {
             (isExpress ? args[2] : args[1])();
+        } else {
+            if (isExpress) {
+                args[1].status(200).end();
+            } else {
+                args[0].status = 200;
+            }
         }
     };
 };

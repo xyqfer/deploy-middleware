@@ -1,4 +1,4 @@
-const https = require('https');
+const request = require('request');
 
 const deploy = (params) => {
     const { method, path, body, } = params.request;
@@ -11,10 +11,7 @@ const deploy = (params) => {
 
         if (ref === `refs/heads/${params.branch}` && !isBot) {
             const deployUrl = params.deployUrl || process.env.DEPLOY_URL;
-            https.request(deployUrl, {
-                method: 'POST',
-            }, () => {});
-
+            request.post(deployUrl);
             return true;
         } else {
             return false;
