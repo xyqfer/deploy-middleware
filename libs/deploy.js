@@ -11,7 +11,10 @@ const deploy = (params) => {
 
         if (ref === `refs/heads/${params.branch}` && !isBot) {
             const deployUrl = params.deployUrl || process.env.DEPLOY_URL;
-            request.post(deployUrl);   
+            const timeout = Math.random() * 5 * 1000;
+            setTimeout(() => {
+                request.post(deployUrl); 
+            }, timeout);
         }
 
         return true;
